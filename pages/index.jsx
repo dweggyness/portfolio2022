@@ -133,7 +133,6 @@ export default function Home() {
                 date="Sept 2020"
                 img={dwegsteaImg}
               />
-            </div>
             <ProjectComponent 
               title="Battleships"
               description="A full-stack battleship clone, supports online-multiplayer, or you can play against the AI!"
@@ -143,6 +142,7 @@ export default function Home() {
               date="June 2020"
               img={battleshipsImg}
             />
+          </div>
           <div className={styles.footer}>
             2021 © Jun Ming
             <div style={{ marginLeft: '0.8em' }} />
