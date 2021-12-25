@@ -125,41 +125,24 @@ export default function Home() {
           </section>
           <div className={styles.projectsContainer}>
             <ProjectComponent 
-              title="How to Resolve a Conflict"
-              description="CommLab Project 4 - Videoooo-oohh. A 3-step how-to video tutorial on how to resolve conflicts, stylized as a WikiHow page."
-              eyecatchIcon={<MdOutlineMovie/>}
-              githubLink="https://github.com/dweggyness/CommLab-Assignment4"
-              demoLink="https://dweggyness.github.io/CommLab-Assignment4/"
-              date="Nov 2021"
-              img={commlab4Img}
-            />
+                title="Dwegstea Tea Blog"
+                description="A tea blog for me to write tea reviews. Uses a 3rd party CMS (Contentful) to add content! Sadly out of date :("
+                eyecatchIcon={<GiTeapot />}
+                githubLink="https://github.com/dweggyness/contentfulBlog"
+                demoLink="https://dwegstea.netlify.app/"
+                date="Sept 2020"
+                img={dwegsteaImg}
+              />
+            </div>
             <ProjectComponent 
-              title="A Project To Die For"
-              description="CommLab Project 3 - Sound. An audio story detailing four students intent on finishing a group project... at any cost."
-              eyecatchIcon={<FaSoundcloud />}
-              githubLink="https://github.com/dweggyness/CommLab-Assignment3"
-              demoLink="https://dweggyness.github.io/CommLab-Assignment3/"
-              date="Nov 2021"
-              img={commlab3Img}
+              title="Battleships"
+              description="A full-stack battleship clone, supports online-multiplayer, or you can play against the AI!"
+              eyecatchIcon={<GiBattleship />}
+              githubLink="https://github.com/dweggyness/battleships"
+              demoLink="https://waterbound-fighting-vessels.herokuapp.com/"
+              date="June 2020"
+              img={battleshipsImg}
             />
-            <ProjectComponent 
-              title="An Aquarium Comic"
-              description="CommLab Project 2 - Comic. A 6-panel interactive comic story on an aquarium and it's newest denizen. "
-              eyecatchIcon={<GiSecretBook />}
-              githubLink="https://github.com/dweggyness/CommLab-Assignment2"
-              demoLink="https://dweggyness.github.io/CommLab-Assignment2/"
-              date="Oct 2021"
-              img={commlab2Img}
-            />
-            <ProjectComponent 
-              title="Portal Story"
-              description="CommLab Project 1 - FFMPEG. A short film recorded through Zoom, on what a world that has portals may look like."
-              eyecatchIcon={<FaVideo />}
-              githubLink="https://github.com/dweggyness/CommLab-Assignment1"
-              date="Sept 2021"
-              img={commlab1Img}
-            />
-          </div>
           <div className={styles.footer}>
             2021 © Jun Ming
             <div style={{ marginLeft: '0.8em' }} />
