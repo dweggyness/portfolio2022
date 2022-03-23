@@ -142,9 +142,18 @@ export default function Home() {
               date="June 2020"
               img={battleshipsImg}
             />
+            <ProjectComponent 
+              title="Netflix Reddit Discussion"
+              description="A simple extension for my own use, displays reddit discussion threads for the current episode/show you just finished watching on Netflix."
+              eyecatchIcon={<FaVideo />}
+              githubLink="https://github.com/dweggyness/netflixRedditDiscussion"
+              demoLink="https://chrome.google.com/webstore/detail/netflix-reddit-discussion/ihiibcpkgomehmkohaedaebejibmdnlm?hl=en"
+              date="Nov 2020"
+              img={battleshipsImg}
+            />
           </div>
           <div className={styles.footer}>
-            2021 © Jun Ming
+            2022 © Jun Ming
             <div style={{ marginLeft: '0.8em' }} />
             •
             <div style={{ marginLeft: '0.9em' }} />
