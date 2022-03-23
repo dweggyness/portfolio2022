@@ -5,7 +5,7 @@ import ProjectComponent from '../components/ProjectComponent.jsx'
 import { FaVideo, FaSoundcloud, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GiBattleship, GiTeapot, GiSecretBook } from 'react-icons/gi';
 import { MdOutlineMovie, MdOutlineMail } from 'react-icons/md';
-import { dwegsteaImg, commlab1Img, commlab2Img, commlab3Img, commlab4Img, battleshipsImg } from '../public/images/projects';
+import { dwegsteaImg, commlab1Img, commlab2Img, commlab3Img, commlab4Img, netflixImg, battleshipsImg } from '../public/images/projects';
 
 export default function Home() {
   const scrollContainer = useRef();
@@ -149,7 +149,7 @@ export default function Home() {
               githubLink="https://github.com/dweggyness/netflixRedditDiscussion"
               demoLink="https://chrome.google.com/webstore/detail/netflix-reddit-discussion/ihiibcpkgomehmkohaedaebejibmdnlm?hl=en"
               date="Nov 2020"
-              img={battleshipsImg}
+              img={netflixImg}
             />
           </div>
           <div className={styles.footer}>
