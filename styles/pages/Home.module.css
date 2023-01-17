@@ -229,7 +229,7 @@
 .projectsContainer {
   margin-top: 1em;
   max-width: 95%;
-  width: 70rem;
+  width: 60rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
