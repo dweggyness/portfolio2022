@@ -111,9 +111,8 @@ export default function Home() {
               Interested in CS & IM.
             </p>
             <p>
-              Outside of computers, I enjoy a good session of gongfu-style <span className={styles.highlight}>tea</span> brewing.
-              I also play a little bit of piano. Currently
-              compiling a list of the best Asian food places in Abu Dhabi.
+              My interests change pretty often, but they usually come down to making something. Currently interested in making (cooking!) food.
+              Also recently rekindled my interest in reading, most usually a Sci-Fi or literary fiction book!
             </p>
             <p>
               {`Here is my `}
