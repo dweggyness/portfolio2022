@@ -30,13 +30,13 @@
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .parallax__layer img {
     height: 50vh; 
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .parallax__layer img {
     height: 45vh; 
   }
