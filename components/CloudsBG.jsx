@@ -27,10 +27,14 @@ class Cloud {
     this.y = y; // in percentage, will be multiplied with window height
     this.img = img;
     this.speed = speed;
-  }
+    this.originalWidth = 0;
 
-  move() {
-    this.x += this.speed;
+    // to get original width of image
+    var temp_img = new Image();
+    temp_img.src = this.img
+    temp_img.onload = () => {
+      this.originalWidth = temp_img.width;
+    }
   }
 
   isOutOfBounds() {
@@ -47,7 +51,9 @@ export default function CloudsBG() {
       if (cloud.isOutOfBounds()) {
         cloud.x = -100;
       } else {
-        cloud.x += cloud.speed
+        // each cloud is moved by a distance of variable 'speed' and a factor of viewport width
+        const distToMove = cloud.speed * (1 + (0.000390625 * window.innerWidth));
+        cloud.x += distToMove;
       }
     })
 
@@ -86,12 +92,14 @@ export default function CloudsBG() {
   return (
     <div style={styles.cloudContainer}>
       {listOfClouds.map((cloud, i) => {
+        console.log(window.innerHeight);
         return <img src={cloud.img} key={i} style={{
           position: 'absolute',
           top: window ? window.innerHeight * cloud.y : 0,
           left: cloud.x,
           right: 0,
           bottom: 0,
+          width: cloud.originalWidth ? cloud.originalWidth * (1 + (0.000390625 * window.innerWidth)) : 'auto',
         }} />
       })}
     </div>
