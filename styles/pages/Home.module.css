@@ -30,7 +30,7 @@
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   .parallax__layer img {
     height: 50vh; 
   }
