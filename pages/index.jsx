@@ -35,7 +35,7 @@ export default function Home() {
     const nameContainerTop = nameContainer.current.offsetTop || 0;
     const titleTop = titleRef.current.offsetTop || 0;
 
-    nameContainerHeight = window.innerHeight - (titleTop - nameContainerTop) + 10;
+    nameContainerHeight = window.innerHeight - (titleTop - nameContainerTop);
   }
 
   useEffect(() => {
@@ -63,20 +63,22 @@ export default function Home() {
         
       </div>
       <div ref={scrollContainer} className={styles.parallax}>
+        
         <nav className={styles.navbar}>
-          <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://github.com/dweggyness/'>
-            <FaGithub className={styles.socialIcon} size='2rem'/>
-          </a>
-          <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ooi-jun-ming-1695251a9/'>
-            <FaLinkedin className={styles.socialIcon} size='2rem'/>
-          </a>
-          <a 
-            onClick={() => scrollToAboutMe()} 
-            className={`${styles.underlineOnHover} ${styles.socialIcon} ${styles.navbarText}`}
-          >
-            About
-          </a>
+            <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://github.com/dweggyness/'>
+              <FaGithub className={styles.socialIcon} size='2rem'/>
+            </a>
+            <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ooi-jun-ming-1695251a9/'>
+              <FaLinkedin className={styles.socialIcon} size='2rem'/>
+            </a>
+            <a 
+              onClick={() => scrollToAboutMe()} 
+              className={`${styles.underlineOnHover} ${styles.socialIcon} ${styles.navbarText}`}
+            >
+              About
+            </a>
         </nav>
+        
         <CloudsBG />
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__1}`}>
             <img src="./images/citylayers/cityLayer5.png" />
@@ -105,7 +107,7 @@ export default function Home() {
           </div>
           <div className={styles.aboutMe}>
             <p>
-              Hello! I&apos;m Jun. I&apos;m a <span className={styles.highlight}>Malaysian</span> sophomore at NYU Abu Dhabi.
+              Hello! I&apos;m Jun. I&apos;m a <span className={styles.highlight}>Malaysian</span> junior at NYU Abu Dhabi.
               Interested in CS & IM.
             </p>
             <p>

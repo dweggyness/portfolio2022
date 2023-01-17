@@ -2,8 +2,9 @@ import React, {useState, useEffect, useRef} from 'react';
 
 const styles = {
   cloudContainer: {
-    transform: "translateZ(-180px) scale(2.8)",
+    transform: "translateZ(-6em) scale(2.8)",
     position: 'absolute',
+    pointerEvents: "none",
     width: '100vw',
     height: '100vh',
     top: 0,
@@ -38,7 +39,7 @@ class Cloud {
   }
 
   isOutOfBounds() {
-    return (this.x - 50 > window.innerWidth)
+    return (this.x > window.innerWidth)
   }
 }
 
@@ -49,10 +50,10 @@ export default function CloudsBG() {
     let tempList = listOfClouds;
     tempList.forEach((cloud) => {
       if (cloud.isOutOfBounds()) {
-        cloud.x = -100;
+        cloud.x = -cloud.originalWidth;
       } else {
         // each cloud is moved by a distance of variable 'speed' and a factor of viewport width
-        const distToMove = cloud.speed * (1 + (0.000390625 * window.innerWidth));
+        const distToMove = cloud.speed * (0.7 + (0.000390625 * window.innerWidth));
         cloud.x += distToMove;
       }
     })
@@ -99,7 +100,7 @@ export default function CloudsBG() {
           left: cloud.x,
           right: 0,
           bottom: 0,
-          width: cloud.originalWidth ? cloud.originalWidth * (1 + (0.000390625 * window.innerWidth)) : 'auto',
+          width: cloud.originalWidth ? cloud.originalWidth * (0.7 + (0.000390625 * window.innerWidth)) : 'auto',
         }} />
       })}
     </div>
