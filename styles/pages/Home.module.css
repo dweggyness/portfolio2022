@@ -90,7 +90,7 @@
   font-size: 5rem;
   color: var(--titlegreen);
   z-index: 5;
-  text-shadow: 0 1px 0 var(--green), 0 2px 0 var(--green), 0 3px 0 var(--green), 0 4px 0 var(--green), 0 5px 0 var(--green), 0 6px 0 var(--green), 0 7px 0 var(--green), 0 8px 0 var(--green), 0 9px 0 var(--green), 0 30px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 var(--green), 0 2px 0 var(--green), 0 3px 0 var(--green), 0 4px 0 var(--green), 0 5px 0 var(--green), 0 6px 0 var(--green), 0 7px 0 var(--green), 0 8px 0 var(--green), 0 9px 0 var(--green), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .mainContainer {
@@ -122,7 +122,6 @@
   width: 25rem;
   height: 6.5rem;
   max-width: 80vw;
-  border: 2px solid darkgray;
   border-radius: 5px;
   background-color: white;
   padding-bottom: 1em;
@@ -131,7 +130,7 @@
 
 @media (max-width: 768px) {
   .titleText {
-    text-shadow: 0 1px 0 var(--green), 0 2px 0 var(--green), 0 3px 0 var(--green), 0 4px 0 var(--green), 0 5px 0 var(--green), 0 6px 0 var(--green), 0 30px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 0 var(--green), 0 2px 0 var(--green), 0 3px 0 var(--green), 0 4px 0 var(--green), 0 5px 0 var(--green), 0 6px 0 var(--green), 0 10px 10px rgba(0, 0, 0, 0.3);
   }
 }
 

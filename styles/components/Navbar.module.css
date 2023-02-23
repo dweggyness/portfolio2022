@@ -18,7 +18,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1rem;
+  padding: 0em 2em;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0em 1em;
+  }
 }
 
 .stickyBackgroundNavbar {

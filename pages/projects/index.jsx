@@ -2,9 +2,9 @@ import React, {useState, useRef, useEffect} from 'react';
 import Navbar from '../../components/Navbar.jsx'
 import ProjectComponent from '../../components/ProjectComponent.jsx'
 import styles from '../../styles/pages/Projects.module.css'
-import { FaVideo } from 'react-icons/fa';
-import { GiBattleship, GiTeapot, GiSecretBook } from 'react-icons/gi';
-import { dwegsteaImg, netflixImg, battleshipsImg } from '../../public/images/projects';
+import { FaVideo, FaRegFileAlt } from 'react-icons/fa';
+import { GiBattleship, GiTeapot } from 'react-icons/gi';
+import { algoVizImg, dwegsteaImg, netflixImg, battleshipsImg } from '../../public/images/projects';
 
 export default function ProjectsPage() {
   return (
@@ -20,21 +20,26 @@ export default function ProjectsPage() {
 
         <div className={styles.projectsContainer}>
           <ProjectComponent 
+              title="Algorithm Visualizations"
+              description="Visualizations of commonly-used algorithms in the course Database Management Systems. Work under the Human-Data Interaction Lab."
+              eyecatchIcon={<FaRegFileAlt />}
+              demoLink="/projects/algo-viz"
+              img={algoVizImg}
+            />
+          <ProjectComponent 
               title="Dwegstea Tea Blog"
-              description="A tea blog for me to write tea reviews. Uses a 3rd party CMS (Contentful) to add content! Sadly out of date :("
+              description="A tea blog for me to write tea reviews. Uses a 3rd party CMS (Contentful) to add content! Hobby project. Out of date."
               eyecatchIcon={<GiTeapot />}
               githubLink="https://github.com/dweggyness/contentfulBlog"
               demoLink="https://dwegstea.netlify.app/"
-              date="Sept 2020"
               img={dwegsteaImg}
             />
           <ProjectComponent 
             title="Battleships"
-            description="A full-stack battleship clone, supports online-multiplayer, or you can play against the AI!"
+            description="A full-stack battleship clone, supports online-multiplayer, or you can play against the AI! Hobby project."
             eyecatchIcon={<GiBattleship />}
             githubLink="https://github.com/dweggyness/battleships"
             demoLink="https://waterbound-fighting-vessels.herokuapp.com/"
-            date="June 2020"
             img={battleshipsImg}
           />
           <ProjectComponent 
@@ -43,7 +48,6 @@ export default function ProjectsPage() {
             eyecatchIcon={<FaVideo />}
             githubLink="https://github.com/dweggyness/netflixRedditDiscussion"
             demoLink="https://chrome.google.com/webstore/detail/netflix-reddit-discussion/ihiibcpkgomehmkohaedaebejibmdnlm?hl=en"
-            date="Nov 2020"
             img={netflixImg}
           />
         </div>

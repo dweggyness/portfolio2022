@@ -25,13 +25,13 @@ export default function ProjectsPage(props) {
             <FaLinkedin className={styles.scaleOnHover} size='2rem'/>
           </a>
           <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
-            <Link href="/resume.pdf">
-              Resume
+            <Link href="/projects">
+              Projects
             </Link>
           </span>
           <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
-            <Link href="/projects">
-              Projects
+            <Link href="/resume.pdf">
+              Resume
             </Link>
           </span>
         </div>
