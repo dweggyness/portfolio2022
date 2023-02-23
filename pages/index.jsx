@@ -100,15 +100,19 @@ export default function Home() {
             <img src="./images/citylayers/cityLayer0.png"/>
         </div>
         <section className={styles.mainContainer}>
+          <div className={styles.aboutMe} style={{ margin: 0 }}>
+            <p>
+              Hello! My name is
+            </p>
+          </div>
           <div ref={nameContainer} className={styles.headerContainer}>
-            
             <h1 style={{opacity: lockTitle ? 1 : 0 }} className={styles.titleText}>
               Jun Ming
             </h1>
           </div>
           <div className={styles.aboutMe}>
             <p>
-              Hello! I&apos;m Jun. I&apos;m a <span className={styles.highlight}>Malaysian</span> junior at NYU Abu Dhabi.
+              I&apos;m a <span className={styles.highlight}>Malaysian</span> junior at NYU Abu Dhabi.
               Interested in CS & IM.
             </p>
             <p>
