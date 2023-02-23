@@ -1,4 +1,11 @@
 
+:root {
+  --titlegreen: #9fe3a3;
+  --green: #82b085;
+  --black: #333333; 
+  --gray: #dddddd;
+}
+
 html {
   font-size: calc(10px + 0.390625vw);
 }
@@ -25,9 +32,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --green: #82b085;
-  --black: #333;
 }

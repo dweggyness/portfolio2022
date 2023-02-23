@@ -88,23 +88,13 @@
   position: relative;
   margin: 0;
   font-size: 5rem;
-  color: #9fe3a3;
+  color: var(--titlegreen);
   z-index: 5;
   text-shadow: 0 1px 0 var(--green), 0 2px 0 var(--green), 0 3px 0 var(--green), 0 4px 0 var(--green), 0 5px 0 var(--green), 0 6px 0 var(--green), 0 7px 0 var(--green), 0 8px 0 var(--green), 0 9px 0 var(--green), 0 30px 20px rgba(0, 0, 0, 0.3);
 }
-   
-.contentContainer {
-  background: #e4e4e4;
-  display: block;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 1000px;
-  z-index: 2;
-}
 
 .mainContainer {
-  background: #e4e4e4;
+  background: var(--gray);
   display: flex;
   flex-direction: column;
   align-items: center;
