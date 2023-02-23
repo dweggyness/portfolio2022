@@ -2,8 +2,9 @@
 :root {
   --titlegreen: #9fe3a3;
   --green: #82b085;
+  --lightgreen: #b7d1b9;
   --black: #333333; 
-  --gray: #dddddd;
+  --background: #fefffe;
 }
 
 html {

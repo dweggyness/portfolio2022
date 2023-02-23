@@ -26,11 +26,12 @@ export default function ProjectComponent(props) {
           objectFit='contain'
         /> }
       </div>
+      
+      {/* <div className={styles.dateContainer}>
+        <span>{date}</span>
+        <FaRegCalendar></FaRegCalendar>
+      </div> */}
       <div className={styles.descriptionContainer}>
-        <div className={styles.dateContainer}>
-          <span>{date}</span>
-          <FaRegCalendar></FaRegCalendar>
-        </div>
 
         <div className={styles.flexCol}>
           <h3 className={styles.title}>{title}</h3>
@@ -44,7 +45,7 @@ export default function ProjectComponent(props) {
           </a> }
           {githubLink && <a href={githubLink} target="_blank" rel="noreferrer" className={styles.button}>
             <FaGithub></FaGithub>
-            <span>Github Link</span>
+            <span>Github</span>
           </a> }
         </div>
       </div>

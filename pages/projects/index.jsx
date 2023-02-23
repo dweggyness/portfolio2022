@@ -11,6 +11,9 @@ export default function ProjectsPage() {
     <>
       <Navbar />
       <main className={styles.mainContainer}>
+        <h1 className={styles.titleContainer}>
+          projects
+        </h1>
 
         <div className={styles.projectsContainer}>
           <ProjectComponent 
