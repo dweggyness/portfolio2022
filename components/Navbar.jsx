@@ -3,16 +3,19 @@ import styles from '../styles/components/Navbar.module.css'
 import Link from 'next/link'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-export default function ProjectsPage() {
+export default function ProjectsPage(props) {
+  const { isHomePage } = props;
+
   return (
-    <nav className={styles.navbar}>
-        <div>
+    <nav className={`${styles.navbar} ${!isHomePage && styles.stickyBackgroundNavbar}`}>
+        { isHomePage ? <div />
+        : <div>
           <h1 className={`${styles.titleText} ${styles.scaleOnHover} ${styles.underlineOnHover}`} style={{ marginBottom: '4px' }}>
             <Link href="/">
               Jun
             </Link>
           </h1>
-        </div>
+        </div> }
 
         <div>
           <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://github.com/dweggyness/'>

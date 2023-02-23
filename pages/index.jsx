@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import styles from '../styles/pages/Home.module.css'
 import CloudsBG from '../components/CloudsBG.jsx'
 import Footer from '../components/Footer.jsx'
+import Navbar from '../components/Navbar.jsx'
 import Link from 'next/link'
 import { FaVideo, FaSoundcloud, FaGithub, FaLinkedin } from 'react-icons/fa';
 
@@ -56,25 +57,7 @@ export default function Home() {
         
       </div>
       <div ref={scrollContainer} className={styles.parallax}>
-        
-        <nav className={styles.navbar}>
-            <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://github.com/dweggyness/'>
-              <FaGithub className={styles.socialIcon} size='2rem'/>
-            </a>
-            <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ooi-jun-ming-1695251a9/'>
-              <FaLinkedin className={styles.socialIcon} size='2rem'/>
-            </a>
-            <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
-              <Link href="/resume.pdf">
-                Resume
-              </Link>
-            </span>
-            <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
-              <Link href="/projects">
-                Projects
-              </Link>
-            </span>
-        </nav>
+        <Navbar isHomePage />
         
         <CloudsBG />
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__1}`}>

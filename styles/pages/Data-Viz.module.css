@@ -1,0 +1,52 @@
+.mainContainer {
+  background: var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 5em;
+  top: 100%;
+  left: 0;
+  right: 0;
+  min-height: 500px;
+  z-index: 3;
+  overflow-y: hidden;
+}
+
+.titleContainer {
+  position: relative;
+  font-size: 3em;
+  margin: 2em 0 1em;
+}
+
+.titleContainer::before {
+  height: 15px;
+  content: "d3.js data visualizat";
+  color: transparent;
+  position: absolute;
+  top: 0.9em;
+  left: -15px;
+  z-index: -1;
+  background-color: var(--green);
+}
+
+.descriptionContainer {
+  margin: 0.5em;
+  font-size: 1.2em;
+  max-width: 90%;
+  width: 700px;
+  line-height: 1.5;
+}
+
+.highlight {
+  color:var(--green);
+  font-weight: 700;
+}
+
+.vizContainer {
+  width: 900px;
+  max-width: 90%;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid var(--black);
+}

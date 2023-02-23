@@ -34,3 +34,189 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+
+/* Unfortunate need to use global CSS as I wasn't able to figure out an easy way
+to integrate the D3.JS visualizations under /projects/data-viz without a lot of work
+recoding the way I did the styling for those projects.
+
+*/
+
+#lht-container path {
+  fill:none;
+}
+#lht-container {
+  width:100%;
+}
+#lht-container .section-title {
+  font-size: 14pt;
+}
+#lht-container .button-container {
+  display: flex;
+}
+#lht-container .btndiv {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+#lht-container .btndiv input {
+  position: relative;
+  transform: translate(0, -50%);
+  top: 50%;
+  height: 25px;
+  width: 65px;
+}
+
+#lht-container .textBtn:hover {
+  cursor: pointer;
+}
+
+
+
+#lht-container .arrowAnimated {
+  stroke: red;
+  stroke-width: 2.5px;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: dash 2s ease forwards;
+}
+
+#lht-container .bBox {
+  rx:2;
+  ry:2;
+}
+
+#lht-container .unclickedBBox {
+  stroke: none;
+  fill: #ececec;
+}
+#lht-container .unclickedText {
+  stroke: none;
+  fill: #8c8c8c;
+}
+#lht-container .clickedBBox {
+  stroke: none;
+  fill: #e0e9fa;
+}
+#lht-container .clickedText {
+  stroke: none;
+  fill: #146396;
+}
+
+#bft-container path {
+  fill:none;
+}
+#bft-container {
+  width:100%;
+  font-size: 1em;
+}
+
+#bft-container text {
+  font-family: Helvetica Neue;
+  font-size: 11pt;
+}
+#bft-container .buttonText {
+  margin: 0;
+}
+#bft-container .button-container {
+  display: flex;
+}
+#bft-container .btndiv {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+#bft-container .btndiv input {
+  height: 25px;
+  width: 65px;
+}
+
+#bft-container .textBtn:hover {
+  cursor: pointer;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#bft-container .arrowAnimated {
+  stroke: red;
+  stroke-width: 2.5px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 1s ease forwards;
+}
+
+#bft-container .bBox {
+  rx:2;
+  ry:2;
+}
+
+#bft-container .unclickedBBox {
+  stroke: none;
+  fill: #ececec;
+}
+#bft-container .unclickedText {
+  stroke: none;
+  fill: #8c8c8c;
+}
+#bft-container .clickedBBox {
+  stroke: none;
+  fill: #e0e9fa;
+}
+#bft-container .clickedText {
+  stroke: none;
+  fill: #146396;
+}
+  
+#eht-container {
+  width:100%;
+}
+#eht-container #button-container {
+  display: flex;
+}
+
+#eht-container .textBtn:hover {
+  cursor: pointer;
+}
+
+#eht-container path {
+  fill:none;
+}
+
+#eht-container .arrowAnimated {
+  stroke: red;
+  stroke-width: 2.5px;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: dash 2s ease forwards;
+}
+
+#eht-container .bBox {
+  rx:2;
+  ry:2;
+}
+
+#eht-container .unclickedBBox {
+  stroke: none;
+  fill: #ececec;
+}
+#eht-container .unclickedText {
+  stroke: none;
+  fill: #8c8c8c;
+}
+#eht-container .clickedBBox {
+  stroke: none;
+  fill: #e0e9fa;
+}
+#eht-container .clickedText {
+  stroke: none;
+  fill: #146396;
+}
+
+#eht-container #container-1 {
+  height: 1600px;
+}

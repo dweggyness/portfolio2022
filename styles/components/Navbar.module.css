@@ -8,21 +8,22 @@
   text-shadow: 0 0.5px 0 var(--green), 0 1px 0 var(--green), 0 1.5px 0 var(--green), 0 2px 0 var(--green), 0 2.5px 0 var(--green), 0 3px 0 var(--green), 0 3.5px 0 var(--green), 0 4px 0 var(--green), 0 4.5px 0 var(--green);
 }
 
-
-
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 5rem;
   width: 100vw;
   z-index: 5;
 
   display: flex;
-  background: var(--lightgreen);
   justify-content: space-between;
   align-items: center;
   padding-right: 1rem;
+}
 
+.stickyBackgroundNavbar {
+  position: fixed;
+  background: var(--lightgreen);
   border-bottom: 1px solid var(--black);
 }
 
