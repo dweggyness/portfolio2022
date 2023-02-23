@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import Navbar from '../../components/Navbar.jsx'
+import Footer from '../../components/Footer.jsx'
 import ProjectComponent from '../../components/ProjectComponent.jsx'
 import styles from '../../styles/pages/Projects.module.css'
 import { FaVideo, FaRegFileAlt } from 'react-icons/fa';
@@ -52,6 +53,7 @@ export default function ProjectsPage() {
           />
         </div>
       </main>
+      <Footer />
     </>
   )
 }

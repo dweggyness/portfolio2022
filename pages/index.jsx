@@ -4,7 +4,7 @@ import CloudsBG from '../components/CloudsBG.jsx'
 import Footer from '../components/Footer.jsx'
 import Navbar from '../components/Navbar.jsx'
 import Link from 'next/link'
-import { FaVideo, FaSoundcloud, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaRocket } from 'react-icons/fa';
 
 export default function Home() {
   const scrollContainer = useRef();
@@ -98,12 +98,16 @@ export default function Home() {
               My interests change pretty often, but they usually come down to making something. Currently interested in making (cooking!) food.
               Also recently rekindled my interest in reading, most usually a Sci-Fi or literary fiction book!
             </p>
-            <p>
-              {`Here is my `}
-              <a href="/resume.pdf" target="_blank" rel="noreferrer" className={styles.resumeHighlight}>
-                <span className={styles.highlight}>resume.</span>
-              </a>
-            </p>
+            <div className={styles.projectTitleContainer}>
+              <div className={styles.button}>
+                <a href={"/projects"} rel="noreferrer">
+                  <>
+                  <FaRocket style={{ marginRight: '4px', marginBottom: '-4px' }}></FaRocket>
+                  <span>Projects</span>
+                  </>
+                </a>
+              </div>
+            </div>
           </div>
           <Footer />
         </section>

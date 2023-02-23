@@ -238,6 +238,22 @@
   color: var(--black);
 }
 
+.projectTitleContainer {
+  position: relative;
+  font-size: 2em;
+  margin: 2em 0 1em;
+}
+
+.projectTitleContainer::before {
+  height: 15px;
+  content: "project 123";
+  color: transparent;
+  position: absolute;
+  top: 1.3em;
+  left: -15px;
+  z-index: -1;
+  background-color: var(--green);
+}
 
 .button {
   display: flex;
