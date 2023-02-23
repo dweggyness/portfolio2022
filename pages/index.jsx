@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import styles from '../styles/pages/Home.module.css'
 import CloudsBG from '../components/CloudsBG.jsx'
 import ProjectComponent from '../components/ProjectComponent.jsx'
+import Footer from '../components/Footer.jsx'
 import { FaVideo, FaSoundcloud, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GiBattleship, GiTeapot, GiSecretBook } from 'react-icons/gi';
 import { MdOutlineMovie, MdOutlineMail } from 'react-icons/md';
@@ -153,16 +154,7 @@ export default function Home() {
               img={netflixImg}
             />
           </div>
-          <div className={styles.footer}>
-            2022 © Jun Ming
-            <div style={{ marginLeft: '0.8em' }} />
-            •
-            <div style={{ marginLeft: '0.9em' }} />
-            <a href='https://aemail.com/gJm9' className={styles.button}>
-              <MdOutlineMail></MdOutlineMail>
-              <span>Contact Me</span>
-            </a>
-          </div>
+          <Footer />
         </section>
       </div>
     </>
