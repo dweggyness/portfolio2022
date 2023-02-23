@@ -1,12 +1,9 @@
 import React, {useState, useRef, useEffect} from 'react';
 import styles from '../styles/pages/Home.module.css'
 import CloudsBG from '../components/CloudsBG.jsx'
-import ProjectComponent from '../components/ProjectComponent.jsx'
 import Footer from '../components/Footer.jsx'
+import Link from 'next/link'
 import { FaVideo, FaSoundcloud, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { GiBattleship, GiTeapot, GiSecretBook } from 'react-icons/gi';
-import { MdOutlineMovie, MdOutlineMail } from 'react-icons/md';
-import { dwegsteaImg, commlab1Img, commlab2Img, commlab3Img, commlab4Img, netflixImg, battleshipsImg } from '../public/images/projects';
 
 export default function Home() {
   const scrollContainer = useRef();
@@ -16,11 +13,6 @@ export default function Home() {
   const [lockTitle, setLockTitle] = useState(false);
 
   let nameContainerHeight = 0;
-
-  // pass this a ref to YCoord you want to scroll to
-  const scrollToAboutMe = () => {
-    scrollContainer.current.scrollTo({ top: window.innerHeight - 100, behavior: "smooth"});
-  }
 
   const handleScroll = (e) => {
     const position = e.target.scrollTop;
@@ -72,12 +64,16 @@ export default function Home() {
             <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ooi-jun-ming-1695251a9/'>
               <FaLinkedin className={styles.socialIcon} size='2rem'/>
             </a>
-            <a 
-              onClick={() => scrollToAboutMe()} 
-              className={`${styles.underlineOnHover} ${styles.socialIcon} ${styles.navbarText}`}
-            >
-              About
-            </a>
+            <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
+              <Link href="/resume.pdf">
+                Resume
+              </Link>
+            </span>
+            <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
+              <Link href="/projects">
+                Projects
+              </Link>
+            </span>
         </nav>
         
         <CloudsBG />
@@ -125,38 +121,6 @@ export default function Home() {
                 <span className={styles.highlight}>resume.</span>
               </a>
             </p>
-          </div>
-          <section className={`${styles.headerContainer} ${styles.workHeader}`}>
-            <h1 className={styles.headerText}>Works</h1>
-          </section>
-          <div className={styles.projectsContainer}>
-            <ProjectComponent 
-                title="Dwegstea Tea Blog"
-                description="A tea blog for me to write tea reviews. Uses a 3rd party CMS (Contentful) to add content! Sadly out of date :("
-                eyecatchIcon={<GiTeapot />}
-                githubLink="https://github.com/dweggyness/contentfulBlog"
-                demoLink="https://dwegstea.netlify.app/"
-                date="Sept 2020"
-                img={dwegsteaImg}
-              />
-            <ProjectComponent 
-              title="Battleships"
-              description="A full-stack battleship clone, supports online-multiplayer, or you can play against the AI!"
-              eyecatchIcon={<GiBattleship />}
-              githubLink="https://github.com/dweggyness/battleships"
-              demoLink="https://waterbound-fighting-vessels.herokuapp.com/"
-              date="June 2020"
-              img={battleshipsImg}
-            />
-            <ProjectComponent 
-              title="Netflix Reddit Discussion"
-              description="A simple extension for my own use, displays reddit discussion threads for the current episode/show you just finished watching on Netflix."
-              eyecatchIcon={<FaVideo />}
-              githubLink="https://github.com/dweggyness/netflixRedditDiscussion"
-              demoLink="https://chrome.google.com/webstore/detail/netflix-reddit-discussion/ihiibcpkgomehmkohaedaebejibmdnlm?hl=en"
-              date="Nov 2020"
-              img={netflixImg}
-            />
           </div>
           <Footer />
         </section>

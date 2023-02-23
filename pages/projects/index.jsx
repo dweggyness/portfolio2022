@@ -14,6 +14,9 @@ export default function ProjectsPage() {
         <h1 className={styles.titleContainer}>
           projects
         </h1>
+        <p className={styles.descriptionContainer}>
+          A collection of some things I've made before, whether it is for fun, a class or work.
+        </p>
 
         <div className={styles.projectsContainer}>
           <ProjectComponent 

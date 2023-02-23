@@ -18,10 +18,12 @@
   z-index: 5;
 
   display: flex;
-  background: white;
+  background: var(--lightgreen);
   justify-content: space-between;
   align-items: center;
   padding-right: 1rem;
+
+  border-bottom: 1px solid var(--black);
 }
 
 .navbar > div {
@@ -49,9 +51,6 @@
 }
 
 /* sliding underline animation when hovering over social icons */ 
-.underlineOnHover:hover {
-  cursor: pointer;
-}
 
 .underlineOnHover::after {
   content:'';

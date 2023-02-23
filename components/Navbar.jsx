@@ -7,11 +7,11 @@ export default function ProjectsPage() {
   return (
     <nav className={styles.navbar}>
         <div>
-          <Link href="/">
-            <h1 className={`${styles.titleText} ${styles.scaleOnHover} ${styles.underlineOnHover}`} style={{ marginBottom: '4px' }}>
-                Jun
-            </h1>
-          </Link>
+          <h1 className={`${styles.titleText} ${styles.scaleOnHover} ${styles.underlineOnHover}`} style={{ marginBottom: '4px' }}>
+            <Link href="/">
+              Jun
+            </Link>
+          </h1>
         </div>
 
         <div>
@@ -21,11 +21,16 @@ export default function ProjectsPage() {
           <a className={styles.underlineOnHover} target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/ooi-jun-ming-1695251a9/'>
             <FaLinkedin className={styles.scaleOnHover} size='2rem'/>
           </a>
-          <Link href="/resume.pdf">
-            <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
+          <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
+            <Link href="/resume.pdf">
               Resume
-            </span>
-          </Link>
+            </Link>
+          </span>
+          <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
+            <Link href="/projects">
+              Projects
+            </Link>
+          </span>
         </div>
     </nav>
   )
