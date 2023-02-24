@@ -3,7 +3,7 @@ import styles from '../styles/pages/Home.module.css'
 import CloudsBG from '../components/CloudsBG.jsx'
 import Footer from '../components/Footer.jsx'
 import Navbar from '../components/Navbar.jsx'
-import Link from 'next/link'
+import { FiPaperclip } from 'react-icons/fi'
 import { FaRocket } from 'react-icons/fa';
 
 export default function Home() {
@@ -98,16 +98,22 @@ export default function Home() {
               My interests change pretty often, but they usually come down to making something. Currently interested in making (cooking!) food.
               Also recently rekindled my interest in reading, most usually a Sci-Fi or literary fiction book!
             </p>
-            <div className={styles.projectTitleContainer}>
-              <div className={styles.button}>
-                <a href={"/projects"} rel="noreferrer">
+            <div className={styles.buttonHighlightContainer}> 
+                <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/projects"} rel="noreferrer">
                   <>
-                  <FaRocket style={{ marginRight: '4px', marginBottom: '-4px' }}></FaRocket>
+                  <FaRocket style={{ marginRight: '6px', marginBottom: '-2px' }}></FaRocket>
                   <span>Projects</span>
                   </>
                 </a>
-              </div>
+              
+                <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/resume.pdf"} rel="noreferrer">
+                  <>
+                  <FiPaperclip style={{ marginRight: '4px', marginBottom: '-2px' }}></FiPaperclip>
+                  <span>Resume</span>
+                  </>
+                </a>
             </div>
+
           </div>
           <Footer />
         </section>
