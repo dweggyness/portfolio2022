@@ -96,7 +96,7 @@ export default function Home() {
             </p>
             <p>
               My interests change pretty often, but they usually come down to making something. Currently interested in making (cooking!) food.
-              Also recently rekindled my interest in reading, most usually a Sci-Fi or literary fiction book!
+              Trying to read 52 books for 2023, from Sci-Fi to classics to literary fiction.
             </p>
             <div className={styles.buttonHighlightContainer}> 
                 <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/projects"} rel="noreferrer">
@@ -121,3 +121,4 @@ export default function Home() {
     </>
   )
 }
+

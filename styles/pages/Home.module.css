@@ -270,7 +270,7 @@
   font-size: 1.2rem;
   padding: 5px;
   border-radius: 4px;
-  background: white;
+  background: var(--lightgreen);
   border: 2px solid var(--black);
   transition: ease-in 0.1s;
 }
