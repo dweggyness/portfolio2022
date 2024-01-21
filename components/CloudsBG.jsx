@@ -62,6 +62,7 @@ export default function CloudsBG() {
   }
 
   useEffect(() => {
+    // random is easy, but random never beats a planned out set of coordinates
     setListOfClouds([
       new Cloud(-0.1 * window.innerWidth, 0.05, cloudImages[0], 1.1),
       new Cloud(0.2 * window.innerWidth, 0.1, cloudImages[2], 0.7),
@@ -93,7 +94,6 @@ export default function CloudsBG() {
   return (
     <div style={styles.cloudContainer}>
       {listOfClouds.map((cloud, i) => {
-        console.log(window.innerHeight);
         return <img src={cloud.img} key={i} style={{
           position: 'absolute',
           top: window ? window.innerHeight * cloud.y : 0,

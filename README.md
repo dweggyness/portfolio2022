@@ -1,1 +1,1 @@
-http://junming.co/
+http://junming.dev/

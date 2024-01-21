@@ -45,7 +45,7 @@ export default function Home() {
 
     return () => {
       window.removeEventListener('resize', () => {});
-      scrollContainer.current.removeEventListener('scroll', handleScroll);
+      scrollContainer.current?.removeEventListener('scroll', handleScroll);
     }
   }, [scrollContainer, nameContainer, titleRef]);
 
@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <div style={{opacity: lockTitle ? 0 : 1 }} className={styles.titleContainer}>
         <h1 ref={titleRef} className={styles.titleText}>Jun Ming</h1>
-        <h3>Welcome to my website.</h3>
+        <h3>Welcome to my site!</h3>
         
       </div>
       <div ref={scrollContainer} className={styles.parallax}>
@@ -79,41 +79,42 @@ export default function Home() {
             <img src="./images/citylayers/cityLayer0.png"/>
         </div>
         <section className={styles.mainContainer}>
-          <div className={styles.aboutMe} style={{ margin: 0 }}>
-            <p>
-              Hello! My name is
-            </p>
-          </div>
-          <div ref={nameContainer} className={styles.headerContainer}>
-            <h1 style={{opacity: lockTitle ? 1 : 0 }} className={styles.titleText}>
-              Jun Ming
-            </h1>
-          </div>
-          <div className={styles.aboutMe}>
-            <p>
-              I&apos;m a <span className={styles.highlight}>Malaysian</span> junior at NYU Abu Dhabi.
-              Interested in CS & IM.
-            </p>
-            <p>
-              My interests change pretty often, but they usually come down to making something. Currently interested in making (cooking!) food.
-              Trying to read 52 books for 2023, from Sci-Fi to classics to literary fiction.
-            </p>
-            <div className={styles.buttonHighlightContainer}> 
-                <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/projects"} rel="noreferrer">
-                  <>
-                  <FaRocket style={{ marginRight: '6px', marginBottom: '-2px' }}></FaRocket>
-                  <span>Projects</span>
-                  </>
-                </a>
-              
-                <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/resume.pdf"} rel="noreferrer">
-                  <>
-                  <FiPaperclip style={{ marginRight: '4px', marginBottom: '-2px' }}></FiPaperclip>
-                  <span>Resume</span>
-                  </>
-                </a>
+          <div>
+            <div className={styles.aboutMe} style={{ margin: 0 }}>
+              <p>
+                Hello! My name is
+              </p>
             </div>
-
+            <div ref={nameContainer} className={styles.headerContainer}>
+              <h1 style={{opacity: lockTitle ? 1 : 0 }} className={styles.titleText}>
+                Jun Ming
+              </h1>
+            </div>
+            <div className={styles.aboutMe}>
+              <p>
+                I&apos;m a <span className={styles.highlight}>Malaysian</span> senior at NYU Abu Dhabi.
+                Graduating (soon) with a degree in Computer Science and a minor in Interactive Media.
+              </p>
+              <p>
+                My interests change pretty often, but they usually come down to making something. Usually making a V60 coffee every morning, and currently learning Debussy's Arabesque No 1 on the piano!
+                Trying to read 36 books for 2024, from Sci-Fi to classics to literary fiction. Read 33 books in 2023!
+              </p>
+              <div className={styles.buttonHighlightContainer}> 
+                  <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/projects"} rel="noreferrer">
+                    <>
+                    <FaRocket style={{ marginRight: '6px', marginBottom: '-2px' }}></FaRocket>
+                    <span>Projects</span>
+                    </>
+                  </a>
+                
+                  <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/resume.pdf"} rel="noreferrer">
+                    <>
+                    <FiPaperclip style={{ marginRight: '4px', marginBottom: '-2px' }}></FiPaperclip>
+                    <span>Resume</span>
+                    </>
+                  </a>
+              </div>
+            </div>
           </div>
           <Footer />
         </section>
