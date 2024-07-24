@@ -5,7 +5,7 @@ import { MdOutlineMail } from 'react-icons/md';
 export default function Footer() {
   return (
     <div className={styles.footer}>
-      2023 © Jun Ming
+      2024 © Jun Ming
       <div style={{ marginLeft: '0.8em' }} />
       •
       <div style={{ marginLeft: '0.9em' }} />
