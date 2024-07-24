@@ -92,12 +92,12 @@ export default function Home() {
             </div>
             <div className={styles.aboutMe}>
               <p>
-                I&apos;m a <span className={styles.highlight}>Malaysian</span> senior at NYU Abu Dhabi.
-                Graduating (soon) with a degree in Computer Science and a minor in Interactive Media.
+                I&apos;m a <span className={styles.highlight}>Malaysian</span> graduate from NYU Abu Dhabi.
+                Graduated in 2024 with a BsC in Computer Science and a minor in Interactive Media.
               </p>
               <p>
-                My interests change pretty often, but they usually come down to making something. Usually making a V60 coffee every morning, and currently learning Debussy's Arabesque No 1 on the piano!
-                Trying to read 36 books for 2024, from Sci-Fi to classics to literary fiction. Read 33 books in 2023!
+                My interests change every now and then, but they usually come down to making something. Usually making a V60 coffee every morning, and currently learning Debussy's Arabesque No 1 on the piano.
+                Trying to read 36 books for 2024, from Sci-Fi to classics to literary fiction. Managed to read 33 books in 2023!
               </p>
               <div className={styles.buttonHighlightContainer}> 
                   <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/projects"} rel="noreferrer">
