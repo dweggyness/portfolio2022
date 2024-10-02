@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/pages/Home.module.css'
 import CloudsBG from '../components/CloudsBG.jsx'
 import Footer from '../components/Footer.jsx'
@@ -44,39 +44,39 @@ export default function Home() {
     }
 
     return () => {
-      window.removeEventListener('resize', () => {});
+      window.removeEventListener('resize', () => { });
       scrollContainer.current?.removeEventListener('scroll', handleScroll);
     }
   }, [scrollContainer, nameContainer, titleRef]);
 
   return (
     <>
-      <div style={{opacity: lockTitle ? 0 : 1 }} className={styles.titleContainer}>
+      <div style={{ opacity: lockTitle ? 0 : 1 }} className={styles.titleContainer}>
         <h1 ref={titleRef} className={styles.titleText}>Jun Ming</h1>
         <h3>Welcome to my site!</h3>
-        
+
       </div>
       <div ref={scrollContainer} className={styles.parallax}>
         <Navbar isHomePage />
-        
+
         <CloudsBG />
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__1}`}>
-            <img src="./images/citylayers/cityLayer5.png" />
+          <img src="./images/citylayers/cityLayer5.png" />
         </div>
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__2}`}>
-            <img src="./images/citylayers/cityLayer4.png" />
+          <img src="./images/citylayers/cityLayer4.png" />
         </div>
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__3}`}>
-            <img src="./images/citylayers/cityLayer3.png" />
+          <img src="./images/citylayers/cityLayer3.png" />
         </div>
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__4}`}>
-            <img src="./images/citylayers/cityLayer2.png" />
+          <img src="./images/citylayers/cityLayer2.png" />
         </div>
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__5}`}>
-            <img src="./images/citylayers/cityLayer1.png"/>
+          <img src="./images/citylayers/cityLayer1.png" />
         </div>
         <div className={`${styles.parallax__layer} ${styles.parallax__layer__6}`}>
-            <img src="./images/citylayers/cityLayer0.png"/>
+          <img src="./images/citylayers/cityLayer0.png" />
         </div>
         <section className={styles.mainContainer}>
           <div>
@@ -86,7 +86,7 @@ export default function Home() {
               </p>
             </div>
             <div ref={nameContainer} className={styles.headerContainer}>
-              <h1 style={{opacity: lockTitle ? 1 : 0 }} className={styles.titleText}>
+              <h1 style={{ opacity: lockTitle ? 1 : 0 }} className={styles.titleText}>
                 Jun Ming
               </h1>
             </div>
@@ -96,23 +96,32 @@ export default function Home() {
                 Graduated in 2024 with a BsC in Computer Science and a minor in Interactive Media.
               </p>
               <p>
-                My interests change every now and then, but they usually come down to making something. Usually making a V60 coffee every morning, and currently learning Debussy's Arabesque No 1 on the piano.
-                Trying to read 36 books for 2024, from Sci-Fi to classics to literary fiction. Managed to read 33 books in 2023!
+                Currently interested in <span className={styles.highlight}>cooking, reading, writing, a weekly movie and playing the piano</span>. I don't think the gym counts as a hobby ( its kinda like doing the laundry ) so it's not in the list.
+                <p />
+                <span className={styles.highlight}>Cooking</span> - Trying to cook a new dish every week, but generally default to East/South-East Asian cuisines.
+                <p />
+                <span className={styles.highlight}>Reading</span> - Trying to read 36 books for 2024, from Sci-Fi to classics to literary fiction. Managed to read 33 books in 2023! Ask me for my Goodreads c:
+                <p />
+                <span className={styles.highlight}>Writing</span> - Trying to write 6 short essays by the end of next year ( peep my blog! ). I like writing about life, friendships and the human condition.
+                <p />
+                <span className={styles.highlight}>Movie</span> - Trying to watch Just One movie a week. Currently catching up on cult classics!
+                <p />
+                <span className={styles.highlight}>Piano</span> - Trying to improve my sight-reading. I'm mostly self-taught too! Currently working on Debussy's Clair de Lune.
               </p>
-              <div className={styles.buttonHighlightContainer}> 
-                  <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/projects"} rel="noreferrer">
-                    <>
+              <div className={styles.buttonHighlightContainer}>
+                <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/projects"} rel="noreferrer">
+                  <>
                     <FaRocket style={{ marginRight: '6px', marginBottom: '-2px' }}></FaRocket>
                     <span>Projects</span>
-                    </>
-                  </a>
-                
-                  <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/resume.pdf"} rel="noreferrer">
-                    <>
+                  </>
+                </a>
+
+                <a className={`${styles.button} ${styles.buttonHighlight} `} href={"/resume.pdf"} rel="noreferrer">
+                  <>
                     <FiPaperclip style={{ marginRight: '4px', marginBottom: '-2px' }}></FiPaperclip>
                     <span>Resume</span>
-                    </>
-                  </a>
+                  </>
+                </a>
               </div>
             </div>
           </div>
