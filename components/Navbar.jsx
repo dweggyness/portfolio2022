@@ -29,11 +29,9 @@ export default function ProjectsPage(props) {
             Projects
           </Link>
         </span>
-        <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
-          <Link href="https://ojmming.substack.com/">
-            Blog
-          </Link>
-        </span>
+        <a className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`} target="_blank" rel="noreferrer" href="https://ojmming.substack.com/">
+          Blog
+        </a>
         <span className={`${styles.underlineOnHover} ${styles.scaleOnHover} ${styles.navbarText}`}>
           <Link href="/resume.pdf">
             Resume
